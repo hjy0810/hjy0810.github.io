@@ -6,7 +6,9 @@ layout: default
 
 [我的第一篇博客](./_post/我的第一个blog.html).
 
-[我的第二篇博客](_post/我的第一个blog.html).
+[我的第二篇博客](_post/2023-09-23-我的第一个blog.html).
+
+[我的第三篇博客](_post/20023-10-27-blog3.html).
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
