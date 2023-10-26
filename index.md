@@ -2,11 +2,11 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
-
 [another page](./another-page.html).
 
 [我的第一篇博客](./_post/我的第一个blog.html).
+
+Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 There should be whitespace between paragraphs.
 
