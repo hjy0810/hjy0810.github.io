@@ -1,6 +1,7 @@
 ---
+layout: article
 title: 在GitHub上搭建Blog
-tags: TeXt
+mathjax: true
 ---
 
 ### 我的第一个blog
