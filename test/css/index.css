@@ -1,0 +1,336 @@
+
+/*
+   注意相对路径
+*/
+body{
+    background: white url('../img/body-bg.png') repeat-x;
+    /*height: 2000px;*/
+}
+
+/*只要有w类名，就设置定宽居中*/
+.w{
+    width: 940px;
+    margin:0 auto;
+}
+
+/*清浮动*/
+.clearfix::before,
+.clearfix::after{
+    content:'';
+    display: table;
+    clear: both;
+}
+
+
+/*header样式*/
+.header{
+    /*background-color: lightseagreen;*/
+    /*使用padding而不用margin是因为margin会导致父子元素margin传递*/
+    padding-top:37px;
+    padding-bottom:46px;
+}
+
+.logo{
+    margin-left:15px;
+    float:left;
+}
+
+.nav ul{
+    /*ul上面添加21px内边距，保证和logo对齐*/
+    padding-top: 21px;
+    float:right;
+}
+
+.nav li{
+    float:left;
+    /*li的左右添加10px内边距，虚线边框下面较长，加8px内边距*/
+    padding:0 10px 8px;
+    /*每个li 的左侧加一个边框*/
+    border-left:1px dotted #d6d6d6;
+}
+
+/*设置a标签的字体样式*/
+.nav a{
+    color:#666666;
+    text-decoration: none;
+    font: 14px bold Georgia;
+}
+
+/*设置超链接移入样式*/
+.nav a:hover{
+    color:#b8b5b5;
+}
+
+.nav p{
+    font:11px Tahoma;
+    color:#b7b7b7;
+}
+
+
+/*banner样式*/
+.banner{
+    height: 355px;
+    background:url("../img/banner-bg.png") no-repeat bottom center;
+    position: relative;
+}
+
+/*dot盒子要使用绝对定位*/
+.banner .dot{
+    position: absolute;
+    left: 15px;
+    top: 314px;
+}
+
+.banner a{
+    background: url("../img/dot.png") no-repeat;
+    width: 17px;
+    height: 17px;
+    float: left;
+    margin-left: 4px;
+}
+
+.banner a:hover,
+.banner a.active{
+    background:url("../img/dot-active.png");
+}
+
+
+/*content样式*/
+/*
+.content{
+    background-color: #0593d5;
+}
+*/
+.content h1{
+    /*可以这样设置行高，单行文本一般高度=行高*/
+    font:24px/48px bold Georgia;
+    height: 48px;
+    text-align:center;
+    padding-bottom:16px;
+    margin-bottom:30px;
+    background: url("../img/h1-bg.png") no-repeat bottom center;
+}
+
+.content li,
+.contact li{
+    width: 300px;
+    float: left;
+}
+
+/*第二个li的左右margin各设置20px*/
+.content li:nth-child(2),
+.contact li:nth-child(2)
+{
+    margin:0 20px;
+}
+
+.content h2{
+    color:#11719e;
+    font:21px Georgia ;
+}
+
+.content .p1{
+    color:#8c8c8c;
+    font:12px Myriad Pro;
+    padding-bottom:8px;
+    /*background-color: #eee;*/
+}
+
+.content .imgDiv{
+    /*背景的高度为202px，但是为了调整图片的高度，加了12px的上*padding，所以这里的height要在背景图的基础上减去12px*/
+    height: 190px;
+    /*让图片居中*/
+    text-align: center;
+    background: url(../img/content-bg.png) no-repeat ;
+    padding-top:12px;
+}
+
+.content .p2{
+    /*单词间距*/
+    word-spacing: 4px;
+    color:#3e3e3e;
+    /*加个行高，不然与下面learn more距离太远*/
+    font:13px/20px Myriad Pro;
+    height: 110px;
+    padding:12px 3px 0;
+}
+
+.content a{
+    color:#016999;
+    font:12px/40px Helvetica;
+    /*文字左侧缩进一个字体大小*/
+    text-indent: 1em;
+    /*宽高的设置是根据背景图片的大小设置的*/
+    display: block;
+    width: 164px;
+    height: 40px;
+    /*去除超链接样式*/
+    text-decoration: none;
+    background:url("../img/learnMore-bg.png") no-repeat bottom center;
+    /*左侧4px margin*/
+    margin:0 0 35px 4px;
+}
+
+.content a:hover{
+    color:#0593d5;
+}
+
+/*contact部分*/
+/*.contact{*/
+    /*background-color: #0593d5;*/
+/*}*/
+
+/*contact中间部分*/
+.contact h2{
+    /*字体样式*/
+    color:#444;
+    font:18px Georgia;
+    /*下边框*/
+    border-bottom:1px dashed #d3d3d3;
+    /*与虚线相距10px，用下padding设置*/
+    padding-bottom:10px;
+    /*设置下边框和input之间的距离*/
+    margin-bottom: 16px;
+}
+
+.contact input{
+    /*清除input的默认样式*/
+/*    margin: 0;
+    padding：0;   */
+
+    /*设置input背景，并根据背景图设置input宽高*/
+    background: url("../img/contactInput-bg.png");
+    /*本来296px，减去左右各10px*/
+    width: 276px;
+    height: 33px;
+    /*去除input默认边框*/
+    border:none;
+    /*input下面有17px间隔*/
+    margin:0 0 17px 0;
+    /*input里的文字与背景边框贴的太近，设置左右10px padding，同时在宽度的基础上减去左右的20px,下面的textarea同理*/
+    padding:0 10px;
+}
+
+.contact textarea{
+    /*清除默认样式*/
+    margin: 0;
+
+    /*设置textarea背景，并根据背景图设置textarea宽高*/
+    background: url("../img/contactTextarea-bg.png");
+    /*宽高要减去各方向内padding*/
+    width: 276px;
+    height: 114px;
+    /*去除textarea默认边框*/
+    border:none;
+    /*设置textarea不能改变大小*/
+    resize:none;
+    padding:10px;
+    /*IE默认会有滚动条*/
+    scroll:auto;
+
+}
+
+.contact .btn{
+    display: block;
+    /*设置超链接的外边距*/
+    margin:10px 0 23px 7px;
+    /*设置文字样式，行高=高度*/
+    font:13px/32px Georgia;
+    color:#d3d3d3;
+    text-indent: 1em;
+    text-decoration: none;
+
+    background: url("../img/contactButton-bg.png");
+    width: 163px;
+    height: 32px;
+}
+
+.contact .btn:hover{
+    color:#f4efef;
+}
+
+/*contact左边部分*/
+.contact p{
+    /*设置行高*/
+    font:12px/1 Myriad Pro;
+    color:#d3d3d3;
+    padding-left:6px;
+    /*background-color: #3e3e3e;*/
+}
+
+.contact .p1{
+    margin-bottom:6px;
+}
+.contact .p2{
+    margin-bottom:12px;
+}
+
+.contact .icon{
+    /*图片与左侧有6px的距离*/
+    padding-left:6px;
+    /*设置图片的下外边距*/
+    margin-bottom: 30px;
+}
+.contact .sc .img{
+    width: 57px;
+    height: 57px;
+    float:left
+}
+
+.contact .cs-ipt{
+    /*清除这个的input的下margin*/
+    margin:0;
+}
+/*第一、三个btn和第二个没有对齐，只好用这个*/
+.sc .btn,
+.news .btn{
+    margin-top:11px;
+}
+
+/*contact右侧部分*/
+.news .title{
+    /*取消上面对这个h2的下外边距，以便统一设置p标签属性*/
+    margin-bottom: 0;
+}
+
+.news p{
+    padding-top:14px;
+    padding-bottom:10px;
+    border-bottom:1px dashed #d3d3d3;
+}
+
+.news img{
+    float:left;
+    margin-right:10px;
+}
+
+/*footer部分*/
+.footer{
+    height: 173px;
+    background-color: #333;
+    border-top:10px solid #4c4c4c;
+}
+
+.footer .w{
+     margin-top:18px;
+ }
+.footer p{
+    color:#4c4c4c;
+    font:12px/1 Myriad Pro;
+    /*background-color: #0593d5;*/
+    margin-left:9px;
+    margin-bottom:10px;
+}
+
+.footer a{
+    text-decoration: none;
+    color:#4c4c4c;
+}
+.footer a:hover{
+    color:#c4bebe;
+}
+
+.footer .right{
+    float:right;
+    margin-right:53px;
+}
